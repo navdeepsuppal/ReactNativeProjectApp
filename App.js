@@ -1,13 +1,35 @@
+
+
+
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
+import StyledButton from "./StyledButton";
+
+
+
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js</Text>
-      <StatusBar style="auto" />
-    </View>
+      <StyledButton
+          type="primary"
+          content={"Custom Order"}
+          onPress={() => {
+            console.warn("Custom Order was pressed");
+          }}
+        />
+
+        <StyledButton
+          type="secondary"
+          content={"Existing Inventory"}
+          onPress={() => {
+            console.warn("Existing Inventory was pressed");
+          }}
+        />
+      
+      
+    </View> 
   );
 }
 
